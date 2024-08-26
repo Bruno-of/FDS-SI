@@ -11,4 +11,4 @@ Nossa equipe é composta pelos integrantes:
 - Bruno Oliveira de Macêdo Filho
 - Matheus Miranda Escorel
 - Pedro
-- Jorge
+- Jorge Augusto Lacerda de Vasconcelos
