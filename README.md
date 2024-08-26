@@ -2,20 +2,25 @@
 Repositório destinado ao projeto da cadeira de Fundamentos de desenvolvimento de software do 2° período de sistemas de informação no Cesar School.
 
 ## Nosso projeto
-O nosso projeto é destinado à mulheres que desejam aprender mais sobre a área de Tecnologia de Informação porém não sabem onde começar, com o objetivo de criar um ambiente mais inclusivo e promover maior diversidade de pessoas na área de TI, de acordo com as ODS's 4.3 e 5.b .
+Estamos desenvolvendo uma plataforma chamada HerCode, com ela, nós alunos buscamos aprofundar nosso conhecimento em Python e Django, visto que HerCode será uma aplicação web desenvolvida utilizando, principalmente, estas linguagens de programação. 
+A Her Code será uma plataforma educacional voltada para o ensino de programação e tecnologia, especialmente para mulheres, uma vez que nesse projeto, focamos nas ODS 4 e 5; Educação de Qualidade e Igualdade de Gênero.
 A aplicação web que iremos criar deverá disponibilizar cursos, videoaulas e atividades para melhor desenvolver a compreensão do aluno sobre sua materia desejada
-Visamos desenvolver o projeto alinhado com as tecnologias predefinidas pelo professor Lucas. É possível que durante o projeto acrescentemos algo diferente para agregar no produto final.
 
 ## Nossa Equipe
 Nossa equipe é composta pelos integrantes:
 - Paulo Henrique Egito
 - Maria Luisa Albuquerque Bnadeira de Carvalho
-- Fernanda Ramalho
+- Fernanda Ramalho Bezerra
 - Bruno Oliveira de Macêdo Filho
 - Matheus Miranda Escorel
 - Pedro Augusto Simões Calazans Dutra
-- Jorge Augusto L V
+- Jorge Augusto Lacerda Vasconcelos
 
-## Backlog no Jira
+## Board do Jira 
+
+## Backlog do Jira
+
+## ScreenCast apresentando o protótipo
 
 ## Protótipos Lo-fi no Figma
+
