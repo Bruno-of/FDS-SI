@@ -9,6 +9,6 @@ Nossa equipe é composta pelos integrantes:
 - Maria luisa
 - Fernanda Ramalho
 - Bruno Oliveira de Macêdo Filho
-- Matheus
+- Matheus Miranda Escorel
 - Pedro
 - Jorge
