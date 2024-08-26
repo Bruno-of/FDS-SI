@@ -9,7 +9,7 @@ A aplicação web que iremos criar deverá disponibilizar cursos, videoaulas e a
 ## Nossa Equipe
 Nossa equipe é composta pelos integrantes:
 - Paulo Henrique Egito
-- Maria Luisa Albuquerque Bnadeira de Carvalho
+- Maria Luisa Albuquerque Bandeira de Carvalho
 - Fernanda Ramalho Bezerra
 - Bruno Oliveira de Macêdo Filho
 - Matheus Miranda Escorel
