@@ -6,7 +6,7 @@ Visamos desenvolver o projeto alinhado com as tecnologias predefinidas pelo prof
 
 Nossa equipe é composta pelos integrantes:
 - Paulo Henrique Egito
-- Maria luisa
+- Maria Luisa Albuquerque Bnadeira de Carvalho
 - Fernanda Ramalho
 - Bruno Oliveira de Macêdo Filho
 - Matheus Miranda Escorel
