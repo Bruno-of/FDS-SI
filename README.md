@@ -18,8 +18,9 @@ Nossa equipe é composta pelos integrantes:
 ![image](https://github.com/user-attachments/assets/4ef9470a-c3c7-4a81-b1f9-34e2d826cd4f)
 
 ## Backlog do Jira
+![image](https://github.com/user-attachments/assets/376a1477-41eb-42c0-86cd-6e940344d088)
 
 ## ScreenCast apresentando o protótipo
 
 ## Protótipos Lo-fi no Figma
-
+https://www.figma.com/board/tLBpTiOs7D14jfbMT4Gqdx/HerCode-%5BFDS%5D?node-id=0-1&t=jxbuFcZCubKfOgzH-1
