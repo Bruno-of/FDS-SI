@@ -15,10 +15,11 @@ Nossa equipe é composta pelos integrantes:
 - Jorge Augusto Lacerda Vasconcelos
 
 ## Board do Jira 
-![image](https://github.com/user-attachments/assets/4ea3da22-1bf2-4582-abeb-89e5a3f35b85)
+![image](https://github.com/user-attachments/assets/5f6359a9-ef89-4441-9eee-473acbc286f1)
 
 ## Backlog do Jira
-![image](https://github.com/user-attachments/assets/376a1477-41eb-42c0-86cd-6e940344d088)
+![image](https://github.com/user-attachments/assets/647dd12f-0e14-4d49-8eaf-612d0398fc24)
+![image](https://github.com/user-attachments/assets/c264e364-ad3b-4f64-ae39-6c014e940bb7)
 
 
 ## ScreenCast apresentando o protótipo
