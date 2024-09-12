@@ -1,4 +1,3 @@
-Aqui está um GitFlow básico que segue as características que você mencionou:
 
 ### Estrutura de Branches
 
