@@ -43,6 +43,7 @@ Nossa equipe é composta pelos integrantes:
 - Matheus Miranda Escorel
 - Pedro Augusto Simões Calazans Dutra
 - Jorge Augusto Lacerda Vasconcelos
+- Luis Filipe Brigido Teles
 
 ## Board do Jira 
 ![image](https://github.com/user-attachments/assets/5f6359a9-ef89-4441-9eee-473acbc286f1)
