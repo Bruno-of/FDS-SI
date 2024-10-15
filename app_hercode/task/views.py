@@ -11,28 +11,30 @@ def home(request):
     return render(request, 'home.html')
 
 # Cadastro de usuário (signup)
-def sigup(request):
+def signup(request):
     if request.method == 'GET':
-        return render(request, 'sigup.html', {
+        return render(request, 'signup.html', {
             'form': UserCreationForm
         })
     else:
         if request.POST['password1'] == request.POST['password2']:
             email = request.POST.get('email')
             username = request.POST.get('username')
-            first_name = request.POST.get('first_name')
-            last_name = request.POST.get('last_name')
+            first_name = request.POST.get('first_name').capitalize()
+            last_name = request.POST.get('last_name').capitalize()
+
+
 
             # Verifica se já existe um usuário com o mesmo email
             if User.objects.filter(email=email).exists():
-                return render(request, 'sigup.html', {
+                return render(request, 'signup.html', {
                     'form': UserCreationForm,
                     "error": 'Este email já está em uso'
                 })
 
             # Verifica se já existe um usuário com o mesmo nome de usuário (username)
             if User.objects.filter(username=username).exists():
-                return render(request, 'sigup.html', {
+                return render(request, 'signup.html', {
                     'form': UserCreationForm,
                     "error": 'Este nome de usuário já está em uso'
                 })
@@ -52,38 +54,63 @@ def sigup(request):
                 return redirect('home')
 
             except IntegrityError:
-                return render(request, 'sigup.html', {
+                return render(request, 'signup.html', {
                     'form': UserCreationForm,
                     "error": 'Erro ao criar usuário'
                 })
 
-        return render(request, 'sigup.html', {
+        return render(request, 'signup.html', {
             'form': UserCreationForm,
             "error": 'As senhas são diferentes'
         })
 
 # Login de usuário (signin)
-def sigin(request):
+def signin(request):
     if request.method == 'GET':
-        return render(request, 'sigin.html', {
+        return render(request, 'signin.html', {
             'form': AuthenticationForm
         })
     else:
-        user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
+        login_input = request.POST['username']
+        password = request.POST['password']
+
+        # verifica se o login é um email ou username
+        if '@' in login_input:
+            try:
+                user = User.objects.get(email=login_input)
+                username = user.username
+            except User.DoesNotExist:
+                return render(request, 'signin.html', {
+                    'form': AuthenticationForm,
+                    'error': 'Usuário ou senha está incorreto'
+                })
+        else:
+            username = login_input
+
+        # autentica o usuario com username ou email
+        user = authenticate(request, username=username, password=password)
+
         if user is None:
-            return render(request, 'sigin.html', {
+            return render(request, 'signin.html', {
                 'form': AuthenticationForm,
                 'error': 'Usuário ou senha está incorreto'
             })
         else:
             login(request, user)
-            return redirect('tasks')
+            return redirect('perfil')
 
 # Logout de usuário (sair)
 @login_required
 def sair(request):
     logout(request)
     return redirect('home')
+
+#pagina de perfil
+@login_required
+def perfil(request):
+    return render(request, 'perfil.html', {
+        'user': request.user
+    })
 
 # Página de tarefas (tasks)
 @login_required
