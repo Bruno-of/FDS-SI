@@ -25,8 +25,8 @@ def signup(request):
         if request.POST['password1'] == request.POST['password2']:
             email = request.POST.get('email')
             username = request.POST.get('username')
-            first_name = request.POST.get('first_name')
-            last_name = request.POST.get('last_name')
+            first_name = request.POST.get('first_name').capitalize()
+            last_name = request.POST.get('last_name').capitalize()
 
             # Verifica se já existe um usuário com o mesmo email
             if User.objects.filter(email=email).exists():
@@ -76,8 +76,25 @@ def signin(request):
             'form': AuthenticationForm
         })
     else:
-        user = authenticate(
-            request, username=request.POST['username'], password=request.POST['password'])
+        login_input = request.POST['username']
+        password = request.POST['password']
+
+        # verifica se o login é um email ou username
+        if '@' in login_input:
+            try:
+                user = User.objects.get(email=login_input)
+                username = user.username
+            except User.DoesNotExist:
+                return render(request, 'signin.html', {
+                    'form': AuthenticationForm,
+                    'error': 'Usuário ou senha está incorreto'
+                })
+        else:
+            username = login_input
+
+        # autentica o usuario com username ou email
+        user = authenticate(request, username=username, password=password)
+
         if user is None:
             return render(request, 'signin.html', {
                 'form': AuthenticationForm,
@@ -85,7 +102,7 @@ def signin(request):
             })
         else:
             login(request, user)
-            return redirect('tasks')
+            return redirect('perfil')
 
 # Logout de usuário (sair)
 
@@ -94,6 +111,15 @@ def signin(request):
 def sair(request):
     logout(request)
     return redirect('home')
+
+# pagina de perfil
+
+
+@login_required
+def perfil(request):
+    return render(request, 'perfil.html', {
+        'user': request.user
+    })
 
 # Página de tarefas (tasks)
 
@@ -104,6 +130,7 @@ def tasks(request):
 
 
 # Página de quizzes
+@login_required
 def quizzes(request):
     quizzes = Quiz.objects.all()
     return render(request, 'quizz.html', {'quizzes': quizzes})
