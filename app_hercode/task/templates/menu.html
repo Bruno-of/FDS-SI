@@ -40,7 +40,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cursos</a> <!-- adicionar algo -->
+                        <a class="nav-link" href="/quizz">Cursos</a> <!-- adicionar algo -->
                     </li>
 
                     <li class="nav-item">
@@ -48,7 +48,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/sigup">Cadastro</a> <!-- adicionar algo -->
+                        <a class="nav-link" href="/signup">Cadastro</a> <!-- adicionar algo -->
                     </li>
 
 
@@ -70,12 +70,30 @@
 {% block content %}
 
 {% endblock %}
-
+<footer class="bg-dark text-white text-center p-3 mt-5">
+    <p>&copy; 2024 HerCode. Todos os direitos reservados.</p>
+    <p>Desenvolvido pelos integrantes da equipe HerCode</p>
+  </footer>
 </body>
 
 </html>
 
 <style>
+html, body {
+    height: 100%;
+}
+
+
+
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 
     .navbar {
         background-color: #110B3D;
@@ -88,6 +106,28 @@
 		width: 60px;
         height: auto;
 		height: 60px;
+    }
+
+
+    footer {
+    background-color: #110b3d;
+    padding: 1rem 0;
+    text-align: center;
+    color: white;
+    margin-top: auto;
+    width: 100%;
+  }
+  footer {
+    margin-top: auto;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+  footer p {
+    margin: 0;
+    font-size: 14px;
     }
 </style>
 

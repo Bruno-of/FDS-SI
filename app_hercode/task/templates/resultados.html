@@ -1,0 +1,70 @@
+{% extends 'menu.html' %} {% block content %}
+<div class="text-center">
+  <h2 class="mt-4 display-4">Resultados do Quiz</h2>
+  <p class="lead">
+    Você acertou <strong>{{ acertos }}</strong> de
+    <strong>{{ total }}</strong> perguntas!
+  </p>
+</div>
+<ul class="list-group mt-4">
+  {% for resultado in resultados %}
+  <li class="list-group-item">
+    <h5>{{ resultado.pergunta }}</h5>
+
+    {% if resultado.correta %}
+    <p class="resposta-correta">
+      Sua resposta: {{ resultado.resposta_usuario }} (Correto)
+    </p>
+    {% else %}
+    <p class="resposta-errada">
+      Sua resposta: {{ resultado.resposta_usuario }} (Errado)
+    </p>
+    <p class="resposta-correta">
+      Resposta correta: {{ resultado.resposta_correta }}
+    </p>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+<style>
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+  }
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    margin-top: auto;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .resposta-correta,
+  .resposta-errada {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+  }
+  .resposta-correta {
+    background-color: #d4edda;
+    border-left: 5px solid #28a745;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .resposta-errada {
+    background-color: #f8d7da;
+    border-left: 5px solid #dc3545;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+</style>
+{% endblock %}

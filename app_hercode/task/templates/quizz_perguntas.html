@@ -1,0 +1,52 @@
+{% extends 'menu.html' %} {% block content %}
+<div class="container mt-5">
+  <div class="capa text-center">
+    <h1 class="display-4">{{ quiz.nome }}</h1>
+    <p class="lead">{{ quiz.descricao }}</p>
+  </div>
+
+  <form method="POST" class="mt-4">
+    {% csrf_token %}
+    <div class="mb-4">
+      {% for pergunta in quiz.perguntas.all %}
+      <div class="card mb-3">
+        <div class="card-header">
+          <h3>{{ pergunta.texto }}</h3>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            {% for opcao in pergunta.opcoes.all %}
+            <li class="list-group-item">
+              <label>
+                <input
+                  type="radio"
+                  name="pergunta_{{ pergunta.id }}"
+                  value="{{ opcao.id }}"
+                  class="me-2"
+                />
+                {{ opcao.texto }}
+              </label>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+    </div>
+  </form>
+</div>
+
+<style>
+  .btn-primary {
+    background-color: #110b3d;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #220e55;
+  }
+</style>
+{% endblock %}
