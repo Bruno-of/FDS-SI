@@ -1,20 +1,19 @@
 from django.http import HttpResponse, HttpResponseBadRequest
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
-from .models import Quiz, Opcao
+from .models import Quiz, Opcao, VideoAula
+from .forms import VideoAulaF   
 # Home do Projeto
-
 
 def home(request):
     return render(request, 'home.html')
 
 # Cadastro de usuário (signup)
-
 
 def signup(request):
     if request.method == 'GET':
@@ -185,3 +184,21 @@ def quiz_resultados(request, quiz_id):
         'total': total
     }
     return render(request, 'resultados.html', context)
+
+
+# Parte de Video-Aulas
+
+def lista_videoaulas(request):
+    videoaulas = VideoAula.objects.all()
+    return render(request, 'lista_videoaulas.html', {'videoaulas': videoaulas})
+
+def adicionar_videoaula(request):
+    if request.method == 'POST':
+        form = VideoAulaF(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_videoaulas')
+    else:
+        form = VideoAulaF()
+    return render(request, 'adicionar_videoaula.html', {'form': form})
+

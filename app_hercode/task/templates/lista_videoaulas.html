@@ -1,0 +1,17 @@
+{% extends 'menu.html' %}
+
+{% block content %}
+<h1>Lista de Videoaulas</h1>
+<ul>
+    {% for video in videoaulas %}
+        <li>
+            <h2>{{ video.titulo }}</h2>
+            <p>{{ video.descricao }}</p>
+            <video width="320" height="240" controls>
+                <source src="{{ video.arquivo_video.url }}" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

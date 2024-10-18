@@ -29,3 +29,13 @@ class Opcao(models.Model):
 
     def __str__(self):
         return self.texto
+
+
+class VideoAula(models.Model):
+    titulo = models.CharField(max_length=255)
+    descricao = models.TextField()
+    arquivo_video = models.FileField(upload_to='videos/')
+    data_publicacao = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.titulo
