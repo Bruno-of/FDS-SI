@@ -1,17 +1,91 @@
 {% extends 'menu.html' %}
 
 {% block content %}
-<h1>Lista de Videoaulas</h1>
-<ul>
-    {% for video in videoaulas %}
-        <li>
-            <h2>{{ video.titulo }}</h2>
-            <p>{{ video.descricao }}</p>
-            <video width="320" height="240" controls>
-                <source src="{{ video.arquivo_video.url }}" type="video/mp4">
-                Seu navegador não suporta a reprodução de vídeos.
-            </video>
-        </li>
-    {% endfor %}
-</ul>
+<style>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header h1 {
+        font-size: 2em;
+        color: #333;
+    }
+
+    .btn-add {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .btn-add:hover {
+        background-color: #218838;
+    }
+
+    .video-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .video-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+
+    .video-info h2 {
+        font-size: 1.5em;
+        color: #444;
+    }
+
+    .video-info p {
+        font-size: 1em;
+        color: #666;
+        margin-top: 10px;
+    }
+
+    .video-player video {
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<div class="container">
+    <div class="header">
+        <h1>Lista de Videoaulas</h1>
+        <a href="{% url 'adicionar_videoaula' %}" class="btn-add">Adicionar nova videoaula</a>
+    </div>
+
+    <ul class="video-list">
+        {% for video in videoaulas %}
+            <li class="video-item">
+                <div class="video-info">
+                    <h2>{{ video.titulo }}</h2>
+                    <p>{{ video.descricao }}</p>
+                </div>
+                <div class="video-player">
+                    <video width="480" height="270" controls>
+                        <source src="{{ video.arquivo_video.url }}" type="video/mp4">
+                        Seu navegador não suporta a reprodução de vídeos.
+                    </video>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}
