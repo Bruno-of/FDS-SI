@@ -29,11 +29,14 @@ urlpatterns = [
     path('quizz/', views.quizzes, name='quizz'),
     path('<int:quiz_id>/', views.quiz_perguntas, name='quiz_perguntas'),
     path('resultados/<int:quiz_id>/', views.quiz_resultados, name='resultados'),
+    path('delete-account/', views.delete_account, name='delete-account'),
     path('perfil/edit_perfil.html', views.edit_perfil, name='edit-perfil'),
-    path('signin/password_reset.html/', auth_views.PasswordResetView.as_view(template_name="password_reset.html"), name="password_reset"),
-    path('password_reset_sent/', auth_views.PasswordResetDoneView.as_view(template_name="password_reset_sent.html"), name="password_reset_done"),
-    path('password_reset_confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name="password_reset_confirm.html"), name="password_reset_confirm"),
-    path('password_reset_complete/', auth_views.PasswordResetCompleteView.as_view(template_name="password_reset_complete.html"), name="password_reset_complete"),
+    path('signin/password_reset.html/', auth_views.PasswordResetView.as_view(
+        template_name="password_reset.html"), name="password_reset"),
+    path('password_reset_sent/', auth_views.PasswordResetDoneView.as_view(
+        template_name="password_reset_sent.html"), name="password_reset_done"),
+    path('password_reset_confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(
+        template_name="password_reset_confirm.html"), name="password_reset_confirm"),
+    path('password_reset_complete/', auth_views.PasswordResetCompleteView.as_view(
+        template_name="password_reset_complete.html"), name="password_reset_complete"),
 ]
-
-
