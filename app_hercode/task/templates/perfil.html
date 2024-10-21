@@ -8,6 +8,8 @@
     <p><strong>Nome de usuário:</strong> {{ user.username }}</p>
     <p><strong>Email:</strong> {{ user.email }}</p>
 
+    <a href="edit_perfil.html" class="btn btn-primary">Editar Perfil</a>
+
     <a href="{% url 'sair' %}" class="btn btn-danger">Logout</a>
 </div>
 {% endblock %}
