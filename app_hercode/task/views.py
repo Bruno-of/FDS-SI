@@ -6,9 +6,8 @@ from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
-from django.contrib import messages  # Fernanda
-from .models import Quiz, Opcao
-from .forms import UserUpdateForm
+from .models import Quiz, Opcao, VideoAula
+from .forms import VideoAulaF, UserUpdateForm
 # Home do Projeto
 
 
@@ -187,6 +186,26 @@ def quiz_resultados(request, quiz_id):
         'total': total
     }
     return render(request, 'resultados.html', context)
+
+
+# Parte de Video-Aulas
+@login_required
+def lista_videoaulas(request):
+    videoaulas = VideoAula.objects.all()
+    return render(request, 'lista_videoaulas.html', {'videoaulas': videoaulas})
+
+
+def adicionar_videoaula(request):
+    if request.method == 'POST':
+        form = VideoAulaF(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_videoaulas')
+    else:
+        form = VideoAulaF()
+    return render(request, 'adicionar_videoaula.html', {'form': form})
+
+# Parte de editar perfil
 
 
 @login_required

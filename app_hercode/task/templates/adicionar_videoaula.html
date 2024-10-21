@@ -1,0 +1,10 @@
+{% extends 'menu.html' %}
+
+{% block content %}
+<h1>Adicionar Videoaula</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar</button>
+</form>
+{% endblock %}
