@@ -1,5 +1,5 @@
 from django.http import HttpResponse, HttpResponseBadRequest
-from django.shortcuts import render
+from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
@@ -7,6 +7,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
 from .models import Quiz, Opcao
+from .forms import UserUpdateForm
 # Home do Projeto
 
 
@@ -185,3 +186,17 @@ def quiz_resultados(request, quiz_id):
         'total': total
     }
     return render(request, 'resultados.html', context)
+
+@login_required
+def edit_perfil(request):
+    if request.method == 'POST':
+        form = UserUpdateForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Seu perfil foi atualizado!')
+            return redirect('perfil') 
+    else:
+        form = UserUpdateForm(instance=request.user)
+    
+    return render(request, 'edit_perfil.html', {'form': form})
+
