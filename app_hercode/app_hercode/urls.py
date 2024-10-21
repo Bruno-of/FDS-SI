@@ -28,4 +28,6 @@ urlpatterns = [
     path('quizz/', views.quizzes, name='quizz'),
     path('<int:quiz_id>/', views.quiz_perguntas, name='quiz_perguntas'),
     path('resultados/<int:quiz_id>/', views.quiz_resultados, name='resultados'),
+    path('delete-account/', views.delete_account, name='delete-account'),
 ]
+

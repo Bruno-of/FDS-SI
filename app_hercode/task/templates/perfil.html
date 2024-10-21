@@ -7,7 +7,9 @@
     <p><strong>Nome completo:</strong> {{ user.first_name }} {{ user.last_name }}</p> <!-- Correção -->
     <p><strong>Nome de usuário:</strong> {{ user.username }}</p>
     <p><strong>Email:</strong> {{ user.email }}</p>
-
+    <div class='form-group'>
+    <button><a href="{% url 'delete-account' %}">Deletar Conta</a></button>
+    </div> 
     <a href="{% url 'sair' %}" class="btn btn-danger">Logout</a>
 </div>
 {% endblock %}
