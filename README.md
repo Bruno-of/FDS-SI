@@ -63,6 +63,7 @@ https://www.figma.com/board/tLBpTiOs7D14jfbMT4Gqdx/HerCode-%5BFDS%5D?node-id=0-1
 
 <details>
   <summary>Entrega 02</summary>
+  
   ## Board do ClickUp
   ![image](https://github.com/user-attachments/assets/83661190-1757-421b-a5ab-6bff87dcca1d)
 
