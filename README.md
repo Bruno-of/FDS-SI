@@ -27,6 +27,7 @@ Estamos desenvolvendo uma plataforma chamada HerCode, com ela, nós alunos busca
 - **Github**: Utilizamos o GitHub para versionamento.
 - **Git**: Controle de versão com Git.
 - **VS Code**: Editor de código utilizado.
+- **Click Up**: Usado para o board contendo backlog, historias e as sprints.
 
 </details>
 
