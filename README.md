@@ -45,10 +45,9 @@ Estamos desenvolvendo uma plataforma chamada HerCode, com ela, nós alunos busca
 
 </details>
 
+
+## Entrega 01
 <details>
-  <summary>
-     <h2>Entrega 01</h2>
-  </summary>  
 ## Board do Jira
 ![image](https://github.com/user-attachments/assets/5f6359a9-ef89-4441-9eee-473acbc286f1)
 
@@ -63,10 +62,9 @@ https://drive.google.com/file/d/1ldtQyUqsxz38KBShmw-UVgkj1_8hVdXX/view
 https://www.figma.com/board/tLBpTiOs7D14jfbMT4Gqdx/HerCode-%5BFDS%5D?node-id=0-1&t=jxbuFcZCubKfOgzH-1
 </details>
 
+
+## Entrega 02
 <details>
-  <summary>
-    Entrega 02
-  </summary>
   
   ## Board do ClickUp
   ![image](https://github.com/user-attachments/assets/83661190-1757-421b-a5ab-6bff87dcca1d)
