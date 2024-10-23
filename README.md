@@ -45,6 +45,8 @@ Estamos desenvolvendo uma plataforma chamada HerCode, com ela, nós alunos busca
 
 </details>
 
+<details>
+  <summary>Entrega 01</summary>  
 ## Board do Jira
 ![image](https://github.com/user-attachments/assets/5f6359a9-ef89-4441-9eee-473acbc286f1)
 
@@ -57,3 +59,34 @@ https://drive.google.com/file/d/1ldtQyUqsxz38KBShmw-UVgkj1_8hVdXX/view
 
 ## Protótipos Lo-fi no Figma
 https://www.figma.com/board/tLBpTiOs7D14jfbMT4Gqdx/HerCode-%5BFDS%5D?node-id=0-1&t=jxbuFcZCubKfOgzH-1
+</details>
+
+<details>
+  <summary>Entrega 02</summary>
+  ## Board do ClickUp
+  ![image](https://github.com/user-attachments/assets/83661190-1757-421b-a5ab-6bff87dcca1d)
+
+  ## Diagrama de atividades
+  https://www.figma.com/board/tLBpTiOs7D14jfbMT4Gqdx/HerCode-%5BFDS%5D?node-id=0-1&t=vt7ZICxzgjbOG55g-1
+
+  ## ScreenCast apresentando a aplicação
+  https://github.com/user-attachments/assets/b84ddeef-52fc-462b-9e94-1dd31d3794ed
+
+
+  ## Programação em pares
+  A experiência de programação em pares no nosso grupo de 9 pessoas foi um pouco diferente, pois adotamos uma abordagem baseada em trios em vez de duplas tradicionais. Isso nos permitiu distribuir as responsabilidades de maneira equilibrada,    garantindo que cada trio fosse responsável por uma parte específica do projeto.
+
+Durante o processo, agendávamos chamadas em trio para programarmos juntos, focando nas features ou histórias nas suas respectivas branches. Além disso, também nos reuníamos como grupo inteiro para alinhar o progresso e garantir que todos estivessem na mesma página. Um aspecto importante foi a criação de pull requests (PRs) para aprovar mudanças mais significativas, o que trouxe uma camada de revisão entre os membros, garantindo a qualidade do código.
+
+Por outro lado, ao trabalharmos em duplas, focamos mais nos comandos do Git, como criar branches, fazer commits e resolver conflitos de merge. Um membro da dupla executava as tarefas práticas, enquanto o outro observava e identificava possíveis erros ou melhorias, o que nos ajudou a evitar problemas mais sérios e a melhorar nosso fluxo de trabalho em equipe.
+</details>
+
+<details>
+  <summary>Entrega 03</summary>
+  
+</details>
+
+<details>
+  <summary>Entrega 04</summary>
+  
+</details>
