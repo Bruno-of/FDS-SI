@@ -46,7 +46,7 @@ Estamos desenvolvendo uma plataforma chamada HerCode, com ela, nós alunos busca
 </details>
 
 <details>
-  <summary>Entrega 01</summary>  
+  ##<summary>Entrega 01</summary>  
 ## Board do Jira
 ![image](https://github.com/user-attachments/assets/5f6359a9-ef89-4441-9eee-473acbc286f1)
 
@@ -82,12 +82,4 @@ Durante o processo, agendávamos chamadas em trio para programarmos juntos, foca
 Por outro lado, ao trabalharmos em duplas, focamos mais nos comandos do Git, como criar branches, fazer commits e resolver conflitos de merge. Um membro da dupla executava as tarefas práticas, enquanto o outro observava e identificava possíveis erros ou melhorias, o que nos ajudou a evitar problemas mais sérios e a melhorar nosso fluxo de trabalho em equipe.
 </details>
 
-<details>
-  <summary>Entrega 03</summary>
-  
-</details>
 
-<details>
-  <summary>Entrega 04</summary>
-  
-</details>
