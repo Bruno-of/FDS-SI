@@ -1,13 +1,11 @@
 # FDS-SI
-Repositório destinado ao projeto da cadeira de Fundamentos de desenvolvimento de software do 2° período de sistemas de informação no Cesar School.
+>**Repositório destinado ao projeto da cadeira de Fundamentos de desenvolvimento de software do 2° período de sistemas de informação no Cesar School.**
 
 ## Nosso projeto
-<details>
-  <summary>Clique para expandir</summary>
 
 Estamos desenvolvendo uma plataforma chamada HerCode, com ela, nós alunos buscamos aprofundar nosso conhecimento em Python e Django, visto que HerCode será uma aplicação web desenvolvida utilizando, principalmente, estas linguagens de programação. A HerCode será uma plataforma educacional voltada para o ensino de programação e tecnologia, especialmente para mulheres, uma vez que nesse projeto, focamos nas ODS 4 e 5; Educação de Qualidade e Igualdade de Gênero. A aplicação web que iremos criar deverá disponibilizar cursos, videoaulas e atividades para melhor desenvolver a compreensão do aluno sobre sua matéria desejada.
 
-</details>
+---
 
 ## Ferramentas utilizadas
 <details>
@@ -31,9 +29,9 @@ Estamos desenvolvendo uma plataforma chamada HerCode, com ela, nós alunos busca
 
 </details>
 
+---
+
 ## Nossa Equipe
-<details>
-  <summary>Clique para expandir</summary>
 
 - Paulo Henrique Egito
 - Maria Luisa Albuquerque Bandeira de Carvalho
@@ -44,8 +42,8 @@ Estamos desenvolvendo uma plataforma chamada HerCode, com ela, nós alunos busca
 - Jorge Augusto Lacerda Vasconcelos
 - Luis Filipe Brigido Teles
 
-</details>
 
+---
 
 ## Entrega 01
 <details>
@@ -65,6 +63,7 @@ https://drive.google.com/file/d/1ldtQyUqsxz38KBShmw-UVgkj1_8hVdXX/view
 https://www.figma.com/board/tLBpTiOs7D14jfbMT4Gqdx/HerCode-%5BFDS%5D?node-id=0-1&t=jxbuFcZCubKfOgzH-1
 </details>
 
+---
 
 ## Entrega 02
 <details>
@@ -87,5 +86,37 @@ Durante o processo, agendávamos chamadas em trio para programarmos juntos, foca
 
 Por outro lado, ao trabalharmos em duplas, focamos mais nos comandos do Git, como criar branches, fazer commits e resolver conflitos de merge. Um membro da dupla executava as tarefas práticas, enquanto o outro observava e identificava possíveis erros ou melhorias, o que nos ajudou a evitar problemas mais sérios e a melhorar nosso fluxo de trabalho em equipe.
 </details>
+
+---
+
+## Como execultar o projeto 
+> **Nota:** Este guia descreve como clonar e configurar o projeto HerCode em sua máquina.
+
+### Pré-requisitos
+
+- **Python 3.x**: Certifique-se de ter o Python 3.x instalado.
+- **Django admin**: Certifique-se de ter o Django instalado.
+- **Git**: Necessário para clonar o repositório.
+
+### Passo a Passo
+No terminal do VSCode faça: 
+
+```bash
+# Passo 1: Clonar o Repositório
+git clone https://github.com/seu-usuario/hercode.git
+#Isso criará uma cópia do repositório na pasta atual. Navegue até o diretório do projeto:
+
+# Passo 2: Acesse a pasta do projeto:
+cd app_hercode
+
+# Passo 3: Executar o Servidor Local
+#Inicie o servidor local do Django com o comando:
+python manage.py runserver
+# O servidor estará acessível em http://127.0.0.1:8000/. Abra este endereço em seu navegador para acessar o HerCode localmente.
+
+# Passo 4: Acessar o Projeto
+#Para acessar o sistema e explorar suas funcionalidades:
+URL Principal: http://127.0.0.1:8000/
+Admin (caso tenha criado um superusuário): http://127.0.0.1:8000/admin
 
 
