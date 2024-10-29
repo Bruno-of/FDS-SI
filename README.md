@@ -103,7 +103,7 @@ No terminal do VSCode faça:
 
 ```bash
 # Passo 1: Clonar o Repositório
-git clone [https://github.com/seu-usuario/hercode.git](https://github.com/Bruno-of/FDS-SI.git)
+git clone https://github.com/Bruno-of/FDS-SI.git
 #Isso criará uma cópia do repositório na pasta atual. Navegue até o diretório do projeto:
 
 # Passo 2: Acesse a pasta do projeto:
